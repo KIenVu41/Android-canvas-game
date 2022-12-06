@@ -79,3 +79,38 @@ class Piranha extends Item
         canvas.drawBitmap(image, null, r, null);
     }
 }
+class Spikes extends Item {
+    Bitmap image;
+    int x, y;
+    int xIndex, yIndex;
+    public Spikes(Context context, int x, int y, int xIndex, int yIndex)
+    {
+        this.image = BitmapFactory.decodeResource(context.getResources(), R.drawable.spikes1);
+        this.x = x;
+        this.y = y;
+        this.xIndex = xIndex;
+        this.yIndex = yIndex;
+    }
+    int getX()
+    {
+        return x;
+    }
+    int getY()
+    {
+        return y;
+    }
+    void setX(int x)
+    {
+        this.x = x;
+    }
+    void setY(int y)
+    {
+        this.y = y;
+    }
+    void drawItem(Canvas canvas, int x, int y)
+    {
+        Rect r = new Rect();
+        r.set(x, y, x+100, y+100);
+        canvas.drawBitmap(image, null, r, null);
+    }
+}
