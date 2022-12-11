@@ -472,6 +472,20 @@ public class MarioView extends SurfaceView implements SurfaceHolder.Callback
         }
         return null;
     }
+    public Spikes searchSpikes() {
+        Item[][] grid = level.getGrid();
+        for(int i = 0; i < (getWidth()*3)/100; i++)
+        {
+            for(int j = 0; j <  getHeight()/100; j++)
+            {
+                if(grid[i][j] != null && grid[i][j] instanceof Goomba && grid[i][j].getX()-offset >= 0 && grid[i][j].getX()-offset <= getWidth())
+                {
+                    return (Spikes) grid[i][j];
+                }
+            }
+        }
+        return null;
+    }
     public void gameDecision()
     {
         if(lives > 0)
