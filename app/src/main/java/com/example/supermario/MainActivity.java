@@ -20,7 +20,6 @@ import android.widget.Button;
 import android.widget.RelativeLayout;
 
 import java.util.ArrayList;
-// Commit on Saturday, June 8
 
 public class MainActivity extends AppCompatActivity {
     FloatingActionButton restart;

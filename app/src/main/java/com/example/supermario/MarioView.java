@@ -38,7 +38,6 @@ import android.widget.Toast;
 
 import java.nio.channels.Pipe;
 import java.util.concurrent.TimeUnit;
-// Commit on Saturday, June 8
 
 @SuppressLint("ClickableViewAccessibility")
 

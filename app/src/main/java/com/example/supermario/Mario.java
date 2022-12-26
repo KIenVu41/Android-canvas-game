@@ -3,7 +3,6 @@ package com.example.supermario;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-// Commit on Saturday, June 8
 
 public class Mario {
     String type;

@@ -2,7 +2,6 @@ package com.example.supermario;
 
 import android.graphics.Canvas;
 import android.view.SurfaceHolder;
-// Commit on Saturday, June 8
 
 public class MarioThread extends Thread
 {
