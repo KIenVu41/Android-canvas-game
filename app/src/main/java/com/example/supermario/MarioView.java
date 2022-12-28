@@ -260,7 +260,15 @@ public class MarioView extends SurfaceView implements SurfaceHolder.Callback
             {
                 goombarun = true;
             }
-            goombax +=(10*goombadirection);
+            if(currentlevel == 1) {
+                goombax +=(10*goombadirection);
+            } else if(currentlevel == 2) {
+                goombax +=(10*goombadirection);
+            } else if(currentlevel == 3) {
+                goombax +=(12*goombadirection);
+            } else if(currentlevel == 4) {
+                goombax += (13*goombadirection);
+            }
 
         }
         if(goomba != null && goombax == x+100+offset && y == floor && !jump)
@@ -475,7 +483,7 @@ public class MarioView extends SurfaceView implements SurfaceHolder.Callback
         {
             for(int j = 0; j <  getHeight()/100; j++)
             {
-                if(grid[i][j] != null && grid[i][j] instanceof Goomba && grid[i][j].getX()-offset >= 0 && grid[i][j].getX()-offset <= getWidth())
+                if(grid[i][j] != null && grid[i][j] instanceof Spikes && grid[i][j].getX()-offset >= 0 && grid[i][j].getX()-offset <= getWidth())
                 {
                     return (Spikes) grid[i][j];
                 }
@@ -530,7 +538,7 @@ public class MarioView extends SurfaceView implements SurfaceHolder.Callback
         {
             level.setGrid(grid);
         }
-        if(currentlevel !=4)
+        if(currentlevel !=5)
         {
             updateLevel(currentlevel);
         }
