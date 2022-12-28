@@ -40,8 +40,6 @@ import java.nio.channels.Pipe;
 import java.util.concurrent.TimeUnit;
 
 @SuppressLint("ClickableViewAccessibility")
-
-
 public class MarioView extends SurfaceView implements SurfaceHolder.Callback
 {
     Level level;
@@ -314,7 +312,7 @@ public class MarioView extends SurfaceView implements SurfaceHolder.Callback
         }
         if(x+offset >= getWidth()*3)
         {
-            if(currentlevel == 3)
+            if(currentlevel == 4)
             {
                 canvas.drawBitmap(level.getBackground(), null, r, null);
                 endGame();
@@ -521,6 +519,10 @@ public class MarioView extends SurfaceView implements SurfaceHolder.Callback
         else if(currentlevel == 3 && changeLevel)
         {
             level = new Level3(c, getContext());
+            level.initializeGrid();
+            changeLevel = false;
+        } else if(currentlevel == 4 && changeLevel) {
+            level = new Level4(c, getContext());
             level.initializeGrid();
             changeLevel = false;
         }
